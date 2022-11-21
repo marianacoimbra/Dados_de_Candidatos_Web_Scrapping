@@ -2,11 +2,11 @@ import scrapy
 
 from ..utils import Utils
 
-class QuotesSpider(scrapy.Spider):
-    name = "candidatos"
+class DeputadasSpider(scrapy.Spider):
+    name = "deputadas"
 
     def start_requests(self):
-        deps_file = open("../lista_deputados.txt", "r")
+        deps_file = open("../lista_deputadas.txt", "r")
 
         deps_urls = deps_file.read().splitlines()
 
@@ -16,7 +16,6 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         main_response= Utils(response)
 
-        main_data = main_response.main(gender="M")
+        main_data = main_response.main(gender="F")
 
         yield main_data
-  

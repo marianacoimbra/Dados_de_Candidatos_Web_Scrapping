@@ -161,5 +161,4 @@ class Utils:
             "salario_bruto": self.__get_gross_salary,
             "quant_viagem": self.__get_trips
         }
-
         return data
