@@ -1,10 +1,9 @@
 import scrapy
 
-from ..utils import Utils
-
+from ..Utils import Utils
 class DeputadasSpider(scrapy.Spider):
     name = "deputadas"
-
+    
     def start_requests(self):
         deps_file = open("../lista_deputadas.txt", "r")
 

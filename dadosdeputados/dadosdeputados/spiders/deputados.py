@@ -1,7 +1,6 @@
 import scrapy
 
-from ..utils import Utils
-
+from ..Utils import Utils
 class DeputadosSpider(scrapy.Spider):
     name = "deputados"
 
