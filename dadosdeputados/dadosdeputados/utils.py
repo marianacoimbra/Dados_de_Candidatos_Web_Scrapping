@@ -60,7 +60,7 @@ class Utils:
         self,
     ):
         try:
-            justified_absences = self.response.xpath(f'//*[@id="atuacao-section"]/div[2]/ul[2]/li[2]/dl/dd[2]/text()').get()
+            justified_absences = self.response.xpath(f'//*[@id="atuacao-section"]/div[2]/ul[2]/li[2]/dl/dd[2]/text()').get().strip()
             return justified_absences
         except:
             return None
