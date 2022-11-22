@@ -80,11 +80,8 @@ class Utils:
         expenses = []
         rows = self.response.xpath('//*[@id="gastomensalcotaparlamentar"]/tbody/tr')
         for row in rows:
-            expense = {
-                     'month' : row.xpath('td[1]//text()').extract_first(),
-                    'expense' : row.xpath('td[2]//text()').extract_first(),
-                 }
-            expenses.append(expense)
+                expense = row.xpath('td[2]//text()').extract_first(),
+                expenses.append(expense)
         return expenses
 
 
@@ -103,11 +100,8 @@ class Utils:
         expenses = []
         rows = self.response.xpath('//*[@id="gastomensalverbagabinete"]/tbody/tr')
         for row in rows:
-            expense = {
-                     'month' : row.xpath('td[1]//text()').extract_first(),
-                     'expense' : row.xpath('td[2]//text()').extract_first(),
-                    }
-            expenses.append(expense)
+                    expense = row.xpath('td[2]//text()').extract_first(),
+                    expenses.append(expense)
         return expenses
 
     def __get_gross_salary(
